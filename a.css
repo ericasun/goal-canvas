@@ -17,11 +17,11 @@ html{
     left:0;
 }
 
-.action > #brush{
+.actions > #brush{
     display:none;
 }
 
-.action.x > #brush{
+.actions.x > #brush{
     display:inline-block;
 }
 
