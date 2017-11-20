@@ -1,14 +1,15 @@
 var yyy = document.getElementById('xxx');
-var context = yyy.getContext("2d");
+var context = yyy.getContext('2d');
 
 autoSetCanvasSize(yyy);
 
 listenToMouse(yyy);
 
 var eraserEnabled = false;
+
 eraser.onclick = function(){
     eraserEnabled = true;
-    action.className = 'actions x';
+    actions.className = 'actions x';
 }
 
 brush.onclick = function(){
@@ -17,12 +18,6 @@ brush.onclick = function(){
 }
 
 function autoSetCanvasSize(canvas){
-    autoSetCanvasSize();
-
-    window.onresize = function(){
-        autoSetCanvasSize();
-    }
-
     function setCanvasSize(){
         var pageWidth = document.documentElement.clientWidth;
         var pageHeight = document.documentElement.clientHeight;
@@ -30,6 +25,14 @@ function autoSetCanvasSize(canvas){
         canvas.width = pageWidth;
         canvas.height = pageHeight;
     }
+
+    setCanvasSize();
+
+    window.onresize = function(){
+        autoSetCanvasSize();
+    }
+
+
 }
 
 function drawCircle(x,y,radius){
@@ -55,6 +58,7 @@ function listenToMouse(canvas){
         x:undefined,
         y:undefined
     }
+
     canvas.onmousedown = function(aaa){
         var x = aaa.clientX;
         var y = aaa.clientY;
