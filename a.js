@@ -18,6 +18,12 @@ brush.onclick = function(){
 }
 
 function autoSetCanvasSize(canvas){
+    setCanvasSize();
+
+    window.onresize = function(){
+        autoSetCanvasSize();
+    }
+
     function setCanvasSize(){
         var pageWidth = document.documentElement.clientWidth;
         var pageHeight = document.documentElement.clientHeight;
@@ -25,14 +31,6 @@ function autoSetCanvasSize(canvas){
         canvas.width = pageWidth;
         canvas.height = pageHeight;
     }
-
-    setCanvasSize();
-
-    window.onresize = function(){
-        autoSetCanvasSize();
-    }
-
-
 }
 
 function drawCircle(x,y,radius){
