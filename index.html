@@ -2,22 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>我的画板</title>
-    <link rel="stylesheet" href="a.css">
+    <link href="a.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
 
 </head>
-
 <body>
-    <canvas id="xxx" width= "300" height = "300">
-    </canvas>
+    <canvas id="xxx"></canvas>
 
     <div id="actions" class="actions">
-        <button id="eraser">橡皮檫</button>
-        <button id="brush">画笔</button>
+        <svg class="icon" aria-hidden="true">
+            <use xlink:href="icon-brush"></use>
+        </svg>
+        <svg class="icon" aria-hidden="true">
+            <use xlink:href="icon-eraser"></use>
+        </svg>
     </div>
 </body>
 
-<script type="text/javascript" src="a.js"></script>
+    <script type="text/javascript" src="j.js"></script>
+    <script src="//at.alicdn.com/t/font_487304_t4h9nkw2g4aemi.js"></script>
+    <script src="//at.alicdn.com/t/font_487298_41q8v47c4tai3sor.js"></script>
 
 </html>

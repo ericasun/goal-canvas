@@ -1,14 +1,10 @@
-#xxx{
-    background:green;
-    display:block;
-}
-
 body{
     margin:0px;
 }
 
-html{
-
+#xxx{
+    background:green;
+    display:block;
 }
 
 .actions{
@@ -29,4 +25,11 @@ html{
     display:none;
 }
 
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
 
