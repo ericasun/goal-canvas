@@ -32,6 +32,7 @@ function listenToUser(yyy){
         context.strokeStyle = 'red';
     }
 
+    //触屏设备
     if(document.body.ontouchstart !== undefined){
         yyy.ontouchstart = function(aaa){
             alert(1);
@@ -70,6 +71,7 @@ function listenToUser(yyy){
         }
 
     } else{
+        //非触屏设备
         yyy.onmousedown = function(aaa){
             var x = aaa.clientX;
             var y = aaa.clientY;
