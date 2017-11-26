@@ -31,7 +31,7 @@ function listenToUser(yyy){
         context.fillStyle = "red";
         context.strokeStyle = 'red';
     }
-   
+
     //触屏设备
     if(document.body.ontouchstart !== undefined){
         yyy.ontouchstart = function(aaa){
