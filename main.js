@@ -1,13 +1,6 @@
 var yyy = document.getElementById('xxx');
 var context = yyy.getContext('2d');
 
-//var eraser = document.getElementById('eraser');
-//var pen = document.getElementById('pen');
-//
-//var red = document.getElementsByClassName('red');
-//var green = document.getElementsByClassName('green');
-//var blue = document.getElementsByClassName('blue');
-
 autoSetCanvasSize(yyy);
 listenToUser(yyy);
 
@@ -36,9 +29,9 @@ function listenToUser(yyy){
     if(document.body.ontouchstart !== undefined){
 
         yyy.ontouchstart = function(aaa){
-            alert("ontouchstart");
-            var x = aaa.touch[0].clientX;
-            var y = aaa.touch[0].clientY;
+
+            var x = aaa.touches[0].clientX;
+            var y = aaa.touches[0].clientY;
 
             using = true;
 
@@ -50,9 +43,9 @@ function listenToUser(yyy){
         }
 
         yyy.ontouchmove = function(aaa){
-            alert("ontouchmove");
-            var x = aaa.touch[0].clientX;
-            var y = aaa.touch[0].clientY;
+
+            var x = aaa.touches[0].clientX;
+            var y = aaa.touches[0].clientY;
 
             if(using == false){return;}
 
