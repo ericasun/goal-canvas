@@ -50,6 +50,7 @@ function listenToUser(yyy){
         }
 
         yyy.ontouchmove = function(aaa){
+            alert(ontouchmove);
             var x = aaa.touch[0].clientX;
             var y = aaa.touch[0].clientY;
 
