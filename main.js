@@ -36,7 +36,7 @@ function listenToUser(yyy){
     if(document.body.ontouchstart !== undefined){
 
         yyy.ontouchstart = function(aaa){
-            
+            alert(ontouchstart);
             var x = aaa.touch[0].clientX;
             var y = aaa.touch[0].clientY;
 
