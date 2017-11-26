@@ -34,6 +34,7 @@ function listenToUser(yyy){
 
     //触屏设备
     if(document.body.ontouchstart !== undefined){
+        alert(2);
         yyy.ontouchstart = function(aaa){
 
             var x = aaa.touch[0].clientX;
