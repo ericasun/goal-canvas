@@ -31,11 +31,11 @@ function listenToUser(yyy){
         context.fillStyle = "red";
         context.strokeStyle = 'red';
     }
-
+    alert(1);
     //触屏设备
     if(document.body.ontouchstart !== undefined){
         yyy.ontouchstart = function(aaa){
-            alert(1);
+
             var x = aaa.touch[0].clientX;
             var y = aaa.touch[0].clientY;
 
