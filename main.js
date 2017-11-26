@@ -1,23 +1,36 @@
 var yyy = document.getElementById('xxx');
 var context = yyy.getContext('2d');
-var eraser = document.getElementById('eraser');
 
+//var eraser = document.getElementById('eraser');
+//var pen = document.getElementById('pen');
+//
+//var red = document.getElementsByClassName('red');
+//var green = document.getElementsByClassName('green');
+//var blue = document.getElementsByClassName('blue');
 
 autoSetCanvasSize(yyy);
-listenToMouse(yyy);
+listenToUser(yyy);
 
+//标记
 var isEraser = false;
+var sign = 0;
 
 function autoSetCanvasSize(yyy){
     setCanvsSize(yyy);
     window.onresize = function(){
-        setCanvsSize();
+        setCanvsSize(yyy);
     }
 }
 
 function listenToUser(yyy){
     var using = false;
     var lastPoint = {"x":undefined,"y":undefined};
+
+    //默认画笔颜色为红色
+    if(!sign){
+        context.fillStyle = "red";
+        context.strokeStyle = 'red';
+    }
 
     if(document.body.ontouchstart !== undefined){
         yyy.ontouchstart = function(aaa){
@@ -50,7 +63,7 @@ function listenToUser(yyy){
             }
         }
 
-        yy.ontouchend = function(){
+        yyy.ontouchend = function(){
             using = false;
             lastPoint =  {"x":undefined,"y":undefined};
         }
@@ -97,19 +110,10 @@ function listenToUser(yyy){
 
 }
 
-
-//function drawCircle(x,y){
-//    context.beginPath();
-//    context.fillStyle = 'black';
-//    context.arc(x,y,1,0,Math.PI * 2);
-//    context.fill();
-//}
-
 function drawLine(x1,y1,x2,y2){
     context.beginPath();
-    context.strokeStyle = "black";
     context.moveTo(x1,y1);
-    context.lineWidth = 2;
+    context.lineWidth = lineWidth;
     context.lineTo(x2,y2);
     context.stroke();
     context.closePath();
@@ -120,15 +124,76 @@ function setCanvsSize(yyy){
     yyy.width = document.documentElement.clientWidth;
 }
 
+//画笔
+pen.onclick = function(){
+    isEraser = false;
+    pen.classList.add('active');
+    eraser.classList.remove('active');
+}
+
+
 //橡皮擦
 eraser.onclick = function(){
     isEraser = true;
-    actions.className = 'actions x';
+    eraser.classList.add('active');
+    pen.classList.remove('active');
 }
 
-//画笔
-brush.onclick = function(){
-    isEraser = false;
-    actions.className = 'actions';
+red.onclick = function(){
+    context.fillStyle = 'red';
+    context.strokeStyle = 'red';
+
+    red.classList.add('active');
+    green.classList.remove('active');
+    blue.classList.remove('active');
 }
 
+//选择画笔颜色
+green.onclick = function(){
+    context.fillStyle = 'green';
+    context.strokeStyle = 'green';
+
+    green.classList.add('active');
+    red.classList.remove('active');
+    blue.classList.remove('active');
+}
+
+blue.onclick = function(){
+    context.fillStyle = 'blue';
+    context.strokeStyle = 'blue';
+
+    blue.classList.add('active');
+    red.classList.remove('active');
+    green.classList.remove('active');
+
+}
+
+//选择画笔线条宽度
+var lineWidth = undefined;
+
+thin.onclick = function(){
+    lineWidth = 5;
+}
+
+thick.onclick = function(){
+    lineWidth = 10;
+}
+
+clear.onclick = function(aaa){
+    var x = aaa.clientX;
+    var y = aaa.clientY;
+    var h =  document.documentElement.clientHeight;
+    var w = document.documentElement.clientWidth;
+    context.clearRect(x,y,w,h);
+}
+
+download.onclick = function(){
+    console.log(1);
+    var url = yyy.toDataURL("image/png");
+    var a = document.createElement('a');
+    document.body.appendChild(a);
+    a.href = url;
+    a.download = '我的大作';
+    a.target = '_blank';
+    a.click();
+}
