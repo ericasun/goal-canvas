@@ -71,6 +71,7 @@ function listenToUser(yyy){
         }
 
     } else{
+        alert(1);
         //非触屏设备
         yyy.onmousedown = function(aaa){
             var x = aaa.clientX;
