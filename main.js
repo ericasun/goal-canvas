@@ -183,11 +183,9 @@ thick.onclick = function(){
 }
 
 clear.onclick = function(aaa){
-    var x = aaa.clientX;
-    var y = aaa.clientY;
     var h =  document.documentElement.clientHeight;
     var w = document.documentElement.clientWidth;
-    context.clearRect(x,y,w,h);
+    context.clearRect(0,0,w,h);
 }
 
 download.onclick = function(){
