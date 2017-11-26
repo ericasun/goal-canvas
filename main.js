@@ -34,9 +34,9 @@ function listenToUser(yyy){
 
     //触屏设备
     if(document.body.ontouchstart !== undefined){
-        alert(2);
-        yyy.ontouchstart = function(aaa){
 
+        yyy.ontouchstart = function(aaa){
+            
             var x = aaa.touch[0].clientX;
             var y = aaa.touch[0].clientY;
 
@@ -72,7 +72,6 @@ function listenToUser(yyy){
         }
 
     } else{
-        alert(1);
         //非触屏设备
         yyy.onmousedown = function(aaa){
             var x = aaa.clientX;
