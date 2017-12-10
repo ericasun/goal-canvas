@@ -9,26 +9,109 @@
 
 </head>
 <body>
-    <canvas id="xxx"></canvas>
 
-    <div id="actions" class="actions">
-        <svg id= "pen" class="icon active" >
-            <use xlink:href="#icon-brush" ></use>
-        </svg>
-
-        <svg id="eraser" class="icon">
-            <use xlink:href="#icon-eraser"></use>
+    <!--导航条-->
+    <div id="toolBar" class="toolBar">
+        <svg id="save" class="icon">
+            <use xlink:href="#icon-save"></use>
         </svg>
 
         <svg id="clear" class="icon">
             <use xlink:href="#icon-shanchu"></use>
         </svg>
-
-        <svg id="download" class="icon">
-            <use xlink:href="#icon-save"></use>
-        </svg>
-
     </div>
+
+    <!--页签-->
+    <div id="tabs">
+        <span>目录</span>
+        <span>主页</span>
+        <span>查看</span>
+    </div>
+
+    <!--主页-->
+    <div id="homepage" class="homepage">
+        <div class="textBottom left">剪贴板</div>
+        <div class="homepageMargin left"></div>
+
+        <div class="textBottom left">图像</div>
+        <div class="homepageMargin left"></div>
+
+        <!--主页 工具-->
+        <div class="tool left">
+            <div class="firstRow">
+                <svg id= "pen" class="icon active" >
+                    <use xlink:href="#icon-brush" ></use>
+                </svg>
+            </div>
+            <div class="secondRow">
+                <svg id="eraser" class="icon">
+                    <use xlink:href="#icon-eraser"></use>
+                </svg>
+            </div>
+            <div class="textBottom">工具</div>
+        </div>
+        <div class="homepageMargin left"></div>
+
+        <!--主页 刷子-->
+        <div class="text left">刷子</div>
+        <div class="homepageMargin left"></div>
+
+        <!--主页 形状-->
+        <div class="textBottom left">形状</div>
+        <div class="homepageMargin left"></div>
+
+        <!--主页 粗细-->
+        <div class="lines left">
+            <ul class="sizes clear">
+                <li class="linesOne"></li>
+                <li class="linesTwo"></li>
+                <li class="linesThree"></li>
+                <li class="linesFour"></li>
+            </ul>
+            <!--<ul class="sizes">-->
+                <!--<li id="thin" class="thin"></li>-->
+                <!--<li id="thick" class="thick"></li>-->
+            <!--</ul>-->
+            <label class="textTip">粗细</label>
+        </div>
+        <div class="homepageMargin left"></div>
+
+        <!--主页 颜色-->
+        <div id ="chooseColor" class="chooseColor left">
+            <div id="colorOne" class="colorOne active left">
+                <div id="colorOneDiv"></div>
+                <label class="textTip">颜<br>色1</label>
+            </div>
+            <div id="colorTwo" class="colorTwo left">
+                <div id="colorTwoDiv"></div>
+                <label class="textTip">颜<br>色2</label>
+            </div>
+            <div id="colors" class="colors left"></div>
+            <div class="textBottom clear">颜色</div>
+        </div>
+        <div class="homepageMargin left"></div>
+    </div>
+
+    <!--查看-->
+    <div id="search" class="search">
+        <!--查看 缩放-->
+        <div class="left">缩放</div>
+        <div class="homepageMargin left"></div>
+
+        <!--查看 显示或隐藏-->
+        <div class="left">显示或隐藏</div>
+        <div class="homepageMargin left"></div>
+
+        <!--查看 显示-->
+        <div class="left">显示</div>
+        <div class="homepageMargin left"></div>
+    </div>
+
+    <!--画板-->
+    <canvas id="xxx"></canvas>
+
+
+    <div id="actions" class="actions"></div>
 
     <ul class="colors">
         <li id="red" class="red active"></li>
@@ -36,10 +119,7 @@
         <li id="blue" class="blue"></li>
     </ul>
 
-    <ul class="sizes">
-        <li id="thin" class="thin"></li>
-        <li id="thick" class="thick"></li>
-    </ul>
+
 
 </body>
 

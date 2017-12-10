@@ -1,99 +1,127 @@
-body{
-    margin:0px;
-    position:fixed;
-    top:0;
-    left:0;
-}
+body{ margin:0px;padding:0px;}
 
-#xxx{
-    display:block;
-    position:fixed;
-    top:0;
-    left:0;
-}
+.left{ float:left; }
+.right{ float:right; }
+.clear{ clear:both; }
 
-.actions{
-    position:fixed;
-    top:5px;
-    left:20px;
-    padding:20px;
-}
+#xxx{ display:block; background:darkgray;}
+.actions{ position:fixed; top:5px; left:20px; padding:20px; }
+.icon { width:1em; height:1em; vertical-align:-0.15em; fill: currentColor; overflow: hidden; }
 
-.icon {
-    width: 1em;
-    height: 1em;
-    vertical-align: -0.15em;
-    fill: currentColor;
-    overflow: hidden;
-}
 
-.actions svg{
-    width:1.5em;
-    height:1.5em;
-    margin:0px 8px;
-    transition:all 0.3s;
-}
+/*主页*/
+/*主页-底部文字*/
+.homepage .textBottom{font-size:14px;text-align: center;color:rgb(115,131,153);margin:15px 0 3px 0;}
+.homepage label.textTip{font-size:14px;color:black;}
 
-.actions svg.active{
-    fill:red;
-    transform:scale(1.2);
-}
+/*主页&查看-间隔*/
+.homepage > .homepageMargin,.search > .homepageMargin {
+    width:1px; height:86px;background:rgb(179,195,214);border:1px solid white;margin:4px 4px;}
+.homepage,.search{ background:rgb(226,236,246); overflow:hidden;}
 
-ol,li{
-    list-style: none;
-    margin:0;
-}
+/*主页-工具*/
+.homepage > .tool > .firstRow{ margin:19px 2px 9px 2px; border:1px solid rgb(179,195,214); border-radius:3px;}
+.homepage > .tool > .secondRow{ border:1px solid rgb(179,195,214); border-radius:3px;}
+.homepage > .tool > div > svg.icon{ width:20px; height:20px;}
 
-.colors{
-    position:fixed;
-    top:60px;
-    left:28px;
-}
+/*.homepage > .tool > .firstRow > svg.active{ fill:red; transform:scale(1.2); }*/
 
-.colors > li{
-    width:20px;
-    height:20px;
-    border-radius:50%;
-    box-shadow:0 0 3px rgba(0,0,0,0.25);
-    margin:10px 0;
-}
+/*主页-选择线条*/
+.homepage > .lines { border:1px solid rgba(225,183,0,0);margin-top:4px;padding:3px 2px;}
+.homepage > .lines:hover{background:rgb(225,210,114);border:1px solid rgb(225,183,0);}
+.homepage > .lines > ul ,.homepage > .lines > ul > li{ list-style:none; margin:0;padding:0;}
+.homepage > .lines > ul > li{width:35px;background:black;margin-bottom:5px;}
+.homepage > .lines > ul > .linesOne{height:1px;}
+.homepage > .lines > ul > .linesTwo{height:2px;}
+.homepage > .lines > ul > .linesThree{height:5px;}
+.homepage > .lines > ul > .linesFour{height:7px;}
 
-.colors> li.red{
-    background:red;
-}
 
-.colors> li.green{
-    background:green;
-}
+/*主页-选择颜色*/
+.homepage > .chooseColor > .colorOne{padding:3px 6px;margin:4px 0;text-align: center;
+    border:1px solid rgba(225,183,0,0);}
+.homepage > .chooseColor > .colorOne:hover{ background:rgb(225,210,114);border:1px solid rgb(225,183,0);}
+.homepage > .chooseColor > .colorOne.active{ background:rgb(255,199,99);border:1px solid rgb(194,155,41);}
 
-.colors>li.blue{
-    background:blue;
-}
+.homepage > .chooseColor > .colorOne > div{ width:25px; height:25px; background:black; border:1px solid white;
+    box-shadow: 0 0 0 1px rgb(128,128,128);margin-bottom:5px;}
 
-.colors> li.active{
-    box-shadow:0 0 3px rgba(0,0,0,0.95);
-}
 
-.sizes{
-    position:fixed;
-    right:20px;
-    top:10px;
-}
+.homepage > .chooseColor > .colorTwo{padding:3.6px 8px;margin:4px 0;text-align: center;
+    border:1px solid rgba(225,183,0,0);}
+.homepage > .chooseColor > .colorTwo:hover{ background:rgb(225,210,114);border:1px solid rgb(225,183,0);}
+.homepage > .chooseColor > .colorTwo.active{ background:rgb(255,199,99);border:1px solid rgb(194,155,41);}
 
-.sizes > li{
-    margin:10px 0;
-}
-.sizes> .thin{
-    height:2px;
-    width:20px;
-    border-top:3px solid black;
-}
+.homepage > .chooseColor > .colorTwo > div{ width:21px; height:21px; background:white; border:1px solid white;
+    box-shadow: 0 0 0 1px rgb(128,128,128);margin-bottom:8px;}
+/*没有实现*/
+.homepage > .chooseColor > .colorTwo > div :hover{border:1px solid rgb(255,255,255);}
 
-.sizes> .thick{
-    height:4px;
-    width:20px;
-    border-top:6px solid black;
-}
+.homepage > .chooseColor > .colorTwo > label{font-size:14px;color:black;}
+
+.homepage > .chooseColor > .colors {margin:5px 0;}
+.homepage > .chooseColor > .colors >div >span { width:18px; height:18px; border:1px solid white;
+    box-shadow: 0 0 0 1px rgb(160,160,160); display:inline-block; margin:0 2px; }
+.homepage > .chooseColor > .colors >div >span:hover{
+    border:1px solid rgb(255,226,148); box-shadow: 0 0 0 1px rgb(242,148,54); }
+
+/*没有实现*/
+.homepage > .chooseColor > .colors >div >span:hover{ border:1px solid rgb(255,255,255); }
+
+
+
+.search{position:fixed; top:50px; left:700px;}
+
+/*.colors{*/
+    /*position:fixed;*/
+    /*top:60px;*/
+    /*left:28px;*/
+/*}*/
+
+/*.colors > li{*/
+    /*width:20px;*/
+    /*height:20px;*/
+    /*border-radius:50%;*/
+    /*box-shadow:0 0 3px rgba(0,0,0,0.25);*/
+    /*margin:10px 0;*/
+/*}*/
+
+/*.colors> li.red{*/
+    /*background:red;*/
+/*}*/
+
+/*.colors> li.green{*/
+    /*background:green;*/
+/*}*/
+
+/*.colors>li.blue{*/
+    /*background:blue;*/
+/*}*/
+
+/*.colors> li.active{*/
+    /*box-shadow:0 0 3px rgba(0,0,0,0.95);*/
+/*}*/
+
+/*.sizes{*/
+    /*position:fixed;*/
+    /*right:20px;*/
+    /*top:10px;*/
+/*}*/
+
+/*.sizes > li{*/
+    /*margin:10px 0;*/
+/*}*/
+/*.sizes> .thin{*/
+    /*height:2px;*/
+    /*width:20px;*/
+    /*border-top:3px solid black;*/
+/*}*/
+
+/*.sizes> .thick{*/
+    /*height:4px;*/
+    /*width:20px;*/
+    /*border-top:6px solid black;*/
+/*}*/
 
 
 
