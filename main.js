@@ -16,6 +16,9 @@ var paintColor = 'black';
 //选择画笔线条宽度
 var lineWidth = undefined;
 
+//位置
+var loc = 5
+
 toolBar.onclick = function(){
     console.log("toolBar");
 }
@@ -68,7 +71,7 @@ function setColors(){
         length:3
     };
 
-    for(var index1=0;index1<keys.length;index1++){
+    for(var index1=0; index1<keys.length; index1++){
         var low = keys[index1].length;
         var div = document.createElement('div');
 
@@ -91,6 +94,7 @@ function autoSetCanvasSize(yyy){
 }
 
 function listenToUser(yyy){
+
     var using = false;
     var lastPoint = {"x":undefined,"y":undefined};
 
@@ -111,7 +115,7 @@ function listenToUser(yyy){
             using = true;
 
             if(isEraser){
-                context.clearRect(x-5,y-5,10,10);
+                context.clearRect(x-loc,y-loc,10,10);
             } else{
                 lastpoint = {"x":x,"y":y};
             }
@@ -125,7 +129,7 @@ function listenToUser(yyy){
             if(using == false){return;}
 
             if(isEraser){
-                context.clearRect(x-5,y-5,10,10);
+                context.clearRect(x-loc, y-loc, 10, 10);
             } else{
                 var newPoint = {"x":x,"y":y}
 
@@ -149,7 +153,7 @@ function listenToUser(yyy){
             using = true;
 
             if(isEraser){
-                context.clearRect(x-5,y-5,10,10);
+                context.clearRect(x-loc,y-loc, 10, 10);
             } else{
                 lastpoint = {"x":x,"y":y};
             }
@@ -158,13 +162,13 @@ function listenToUser(yyy){
         }
 
         yyy.onmousemove = function(aaa){
-            var x = aaa.clientX;
-            var y = aaa.clientY;
+            var x = aaa.clientX - 10;
+            var y = aaa.clientY - 10;
 
             if(using == false){return;}
 
             if(isEraser){
-                context.clearRect(x-5,y-5,10,10);
+                context.clearRect(x-loc,y-loc,10,10);
             } else{
                 var newPoint = {"x":x,"y":y}
 
@@ -267,3 +271,4 @@ save.onclick = function(){
     a.target = '_blank';
     a.click();
 }
+

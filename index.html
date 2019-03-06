@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <title>我的画板</title>
     <link href="a.css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width,
-    initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 </head>
 <body>
@@ -30,38 +30,146 @@
 
     <!--主页-->
     <div id="homepage" class="homepage">
-        <div class="textBottom left">剪贴板</div>
-        <div class="homepageMargin left"></div>
+        <!--主页 剪贴板-->
+        <div class="clipboard floatLeft">
+            <div class="clipboardLeft floatLeft">
+                <img class="pasterPic" src="./img/paste.png"/>
+                <div class="textTip">粘贴</div>
+                <img class="invertedTriangle" src="img/invertedTriangle.png" />
+            </div>
+            <div class="clipboardRight floatLeft">
+                <div class="clear">
+                    <img class="clipboardAndimgSize floatLeft" src="./img/scissors.png" />
+                    <span class="textTip floatLeft">剪切</span>
+                </div>
+                <div class="clear">
+                    <img class="clipboardAndimgSize floatLeft" src="./img/copy.png" />
+                    <span class="textTip floatLeft">复制</span>
+                </div>
+            </div>
+            <div class="textBottom clear">剪贴板</div>
+        </div>
 
-        <div class="textBottom left">图像</div>
-        <div class="homepageMargin left"></div>
+        <div class="homepageMargin"></div>
+
+        <!--主页 图像-->
+        <div class="img floatLeft">
+            <div class="imgLeft floatLeft">
+                <img class="dottedPic" src="img/dotted.png"/>
+                <div class="textTip">选择</div>
+                <img class="invertedTriangle" src="img/invertedTriangle.png" />
+            </div>
+            <div class="imgRight floatLeft">
+                <div class="clear">
+                    <img class="clipboardAndimgSize floatLeft" src="./img/tailoring.png" />
+                    <span class="textTip floatLeft">裁切</span>
+                </div>
+                <div class="clear">
+                    <img class="clipboardAndimgSize floatLeft" src="./img/resizing.png" />
+                    <span class="textTip floatLeft">重新调整大小</span>
+                </div>
+                <div class="clear">
+                    <img class="clipboardAndimgSize floatLeft" src="./img/rotate.png" />
+                    <span class="textTip floatLeft">旋转</span>
+                    <img class="invertedTriangle" src="img/invertedTriangle.png" />
+                </div>
+            </div>
+            <div class="textBottom clear">图像</div>
+        </div>
+
+        <div class="homepageMargin"></div>
 
         <!--主页 工具-->
-        <div class="tool left">
+        <div class="tool floatLeft">
             <div class="firstRow">
-                <svg id= "pen" class="icon active" >
-                    <use xlink:href="#icon-brush" ></use>
-                </svg>
+                <div class="floatLeft"><img id = "pen" src="./img/pencil.png" /></div>
+                <div class="toolMargin"></div>
+                <div class="floatLeft"><img src="./img/paintDrum.png" /></div>
+                <div class="toolMargin"></div>
+                <div class="floatLeft"><img src="./img/a.png" /></div>
             </div>
             <div class="secondRow">
-                <svg id="eraser" class="icon">
-                    <use xlink:href="#icon-eraser"></use>
-                </svg>
+                <div class="floatLeft"><img id="eraser" src="./img/eraser.png" /></div>
+                <div class="toolMargin"></div>
+                <div class="floatLeft"><img src="./img/straw.png" /></div>
+                <div class="toolMargin"></div>
+                <div class="floatLeft"><img src="./img/magnifier.png" /></div>
             </div>
             <div class="textBottom">工具</div>
         </div>
         <div class="homepageMargin left"></div>
 
         <!--主页 刷子-->
-        <div class="text left">刷子</div>
-        <div class="homepageMargin left"></div>
+        <div class="brush floatLeft">
+            <img class="brushPic" src="./img/brush.png" />
+            <div class="textTip">刷子</div>
+        </div>
+        <div class="homepageMargin floatLeft"></div>
 
         <!--主页 形状-->
-        <div class="textBottom left">形状</div>
-        <div class="homepageMargin left"></div>
+        <div class="shape floatLeft">
+            <div class="shapeLeft floatLeft">
+                <table class="shapeTool floatLeft">
+                    <tr>
+                        <td><img src="img/斜线.png" /></td>
+                        <td><img src="img/曲线.png" /></td>
+                        <td><img src="img/椭圆.png" /></td>
+                        <td><img src="img/长方形.png" /></td>
+                        <td><img src="img/圆角矩形.png" /></td>
+                        <td><img src="img/多边形.png" /></td>
+                        <td><img src="img/正三角.png" /></td>
+                    </tr>
+                    <tr>
+                        <td><img src="img/直角三角形.png" /></td>
+                        <td><img src="img/菱形.png" /></td>
+                        <td><img src="img/五边形.png" /></td>
+                        <td><img src="img/六边形.png" /></td>
+                        <td><img src="img/向右箭头.png" /></td>
+                        <td><img src="img/向左箭头.png" /></td>
+                        <td><img src="img/向上箭头.png" /></td>
+                    </tr>
+                    <tr>
+                        <td><img src="img/向下箭头.png" /></td>
+                        <td><img src="img/四角星.png" /></td>
+                        <td><img src="img/五角星.png" /></td>
+                        <td><img src="img/六角星.png" /></td>
+                        <td><img src="img/对话框.png" /></td>
+                        <td><img src="img/对话框%20(1).png" /></td>
+                        <td><img src="img/云.png" /></td>
+                    </tr>
+                    <tr>
+                        <td><img src="img/爱心.png" /></td>
+                        <td><img src="img/闪电%20%5B转换%5D.png" /></td>
+                    </tr>
+                </table>
+                <table class="floatLeft">
+                    <tr>
+                        <td>
+                            <img class="invertedTriangle" src="img/invertedTriangle.png" style="transform: rotateX(180deg)"/>
+                        </td>
+                    </tr>
+                    <tr><td><img class="invertedTriangle" src="img/invertedTriangle.png" /></td></tr>
+                    <tr><td><img class="invertedTriangle" src="img/invertedTriangle.png" /></td></tr>
+                </table>
+            </div>
+            <div class="shapeRight floatLeft">
+                <div>
+                    <img class="floatLeft" src="./img/轮廓.png" />
+                    <span class="textTip floatLeft">轮廓</span>
+                    <img class="invertedTriangle" src="img/invertedTriangle.png" />
+                </div>
+                <div>
+                    <img class="floatLeft" src="./img/填充.png" />
+                    <span class="textTip floatLeft">填充</span>
+                    <img class="invertedTriangle" src="img/invertedTriangle.png" />
+                </div>
+            </div>
+            <div class="textBottom">形状</div>
+        </div>
+        <div class="homepageMargin floatLeft"></div>
 
         <!--主页 粗细-->
-        <div class="lines left">
+        <div class="lines floatLeft">
             <ul class="sizes clear">
                 <li class="linesOne"></li>
                 <li class="linesTwo"></li>
@@ -72,40 +180,46 @@
                 <!--<li id="thin" class="thin"></li>-->
                 <!--<li id="thick" class="thick"></li>-->
             <!--</ul>-->
-            <label class="textTip">粗细</label>
+            <label class="textTip">
+                粗细 <img class="invertedTriangle" src="img/invertedTriangle.png" />
+            </label>
         </div>
-        <div class="homepageMargin left"></div>
+        <div class="homepageMargin floatLeft"></div>
 
         <!--主页 颜色-->
-        <div id ="chooseColor" class="chooseColor left">
-            <div id="colorOne" class="colorOne active left">
+        <div id ="chooseColor" class="chooseColor floatLeft">
+            <div id="colorOne" class="colorOne active floatLeft">
                 <div id="colorOneDiv"></div>
                 <label class="textTip">颜<br>色1</label>
             </div>
-            <div id="colorTwo" class="colorTwo left">
+            <div id="colorTwo" class="colorTwo floatLeft">
                 <div id="colorTwoDiv"></div>
                 <label class="textTip">颜<br>色2</label>
             </div>
-            <div id="colors" class="colors left"></div>
+            <div id="colors" class="colors floatLeft"></div>
+            <div class="floatLeft">
+                <img src="img/颜色选择.png" class="floatLeft"/>
+                <div class="textTip">编辑颜色</div>
+            </div>
             <div class="textBottom clear">颜色</div>
         </div>
-        <div class="homepageMargin left"></div>
+        <div class="homepageMargin floatLeft"></div>
     </div>
 
-    <!--查看-->
-    <div id="search" class="search">
-        <!--查看 缩放-->
-        <div class="left">缩放</div>
-        <div class="homepageMargin left"></div>
+    <!--&lt;!&ndash;查看&ndash;&gt;-->
+    <!--<div id="search" class="search">-->
+        <!--&lt;!&ndash;查看 缩放&ndash;&gt;-->
+        <!--<div class="left">缩放</div>-->
+        <!--<div class="homepageMargin left"></div>-->
 
-        <!--查看 显示或隐藏-->
-        <div class="left">显示或隐藏</div>
-        <div class="homepageMargin left"></div>
+        <!--&lt;!&ndash;查看 显示或隐藏&ndash;&gt;-->
+        <!--<div class="left">显示或隐藏</div>-->
+        <!--<div class="homepageMargin left"></div>-->
 
-        <!--查看 显示-->
-        <div class="left">显示</div>
-        <div class="homepageMargin left"></div>
-    </div>
+        <!--&lt;!&ndash;查看 显示&ndash;&gt;-->
+        <!--<div class="left">显示</div>-->
+        <!--<div class="homepageMargin left"></div>-->
+    <!--</div>-->
 
     <!--画板-->
     <canvas id="xxx"></canvas>
@@ -113,11 +227,11 @@
 
     <div id="actions" class="actions"></div>
 
-    <ul class="colors">
-        <li id="red" class="red active"></li>
-        <li id="green" class="green"></li>
-        <li id="blue" class="blue"></li>
-    </ul>
+    <!--<ul class="colors">-->
+        <!--<li id="red" class="red active">1</li>-->
+        <!--<li id="green" class="green">2</li>-->
+        <!--<li id="blue" class="blue">3</li>-->
+    <!--</ul>-->
 
 
 
